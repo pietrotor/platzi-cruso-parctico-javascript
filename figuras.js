@@ -75,7 +75,15 @@ function areaTriangulo(lado1, lado2, base){
     let altura = Math.sqrt(lado1*lado2 - (base*base)/2)
     return (base * altura)/2;
 }
-
+function tipoTriangulo (lado1, lado2, base){
+    if (lado1 == lado2 && lado2==base){
+        return ("Es un triangulo Equilatero");    
+    }else if (lado1 != lado2 && lado2 != base ){
+        return ("Es un triangulo Escaleno");             
+    }else{
+        return ("Es un triangulo isoceles");
+    }
+}
 
 // Circulos
 function areaCirculo(radio){
@@ -83,4 +91,48 @@ function areaCirculo(radio){
 }
 function perimetroCirculo(radio){
     return 2*PI*radio;
+}
+
+// Funciones para el html
+
+// Cuadrado
+function calcularPerimetroCuadrado(){
+    const input = document.getElementById("inputcuadrado");
+    const value = input.value;
+    let perimetro = perimetroCuadrado(value);
+    alert("El perimetro es: " +  perimetro);
+}
+function calcularAreaCuadrado(){
+    const input = document.getElementById("inputcuadrado");
+    const value = input.value;
+    let area = areaCuadrado(value);
+    alert("El area es: " +  area);
+}
+
+// Triangulo
+
+// Perimetro
+function calcularPerimetroTriangulo(){
+    const input1 = document.getElementById("inputladotriangulo1");
+    const input2 = document.getElementById("inputladotriangulo2");
+    const input3 = document.getElementById("inputbasetriangulo");
+    let lado1 = parseInt(input1.value);
+    let lado2 = parseInt(input2.value);
+    let base = parseInt(input3.value);
+    let perimetro = perimetroTriangulo(lado1, lado2, base);
+    let tipoTriangulo_var = tipoTriangulo(lado1, lado2, base);
+    alert ("El perimetro del triangulo es : " + perimetro + "---- " + tipoTriangulo_var);
+}
+
+// Area
+function calcularAreaTriangulo(){
+    const input1 = document.getElementById("inputladotriangulo1");
+    const input2 = document.getElementById("inputladotriangulo2");
+    const input3 = document.getElementById("inputbasetriangulo");
+    let lado1 = input1.value;
+    let lado2 = input2.value;
+    let base = input3.value;
+    let area = areaTriangulo(lado1, lado2, base);
+    let tipoTriangulo_var = tipoTriangulo(lado1, lado2, base);
+    alert ("El area del triangulo es : " + area + "---- " + tipoTriangulo_var);
 }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Figuras Geométricas</title>
 </head>
 <body>
@@ -12,14 +16,32 @@
         <p>Primer taller de JavaScript</p>
     </header>    
     <main>
-        <section>
+        <section class="cuadrados">
             <h2>Calculadora de area y perimetro del cuadrado</h2>
             <form>
+                <img src="https://www.caracteristicass.de/wp-content/uploads/2018/06/caracteristicas-del-cuadrado.jpg" alt="">
                 <label for="inputcuadrado">
-                    <input id="inputcuadrado" type="number">
-                    <button type="button" id="cuadrado_perimetro">Calcular el Perimetro</button>
-                    <button type="button" id="cuadrado_area">Calcular el Área</button>
+                    <input id="inputcuadrado" type="number" placeholder="Ingresa un lado del triangulo">
+                </label>                
+                <div class="botones">
+                    <button type="button" id="cuadrado_perimetro" onclick="calcularPerimetroCuadrado()">Calcular el Perimetro</button>
+                    <button type="button" id="cuadrado_area" onclick="calcularAreaCuadrado()">Calcular el Área</button>
+                </div>
+            </form>
+        </section>
+        <section class="triangulos">
+            <h2>Calculadora de area y perimetro del triangulos</h2>
+            <form>
+                <img src="https://www.caracteristicass.de/wp-content/uploads/2018/06/caracteristicas-del-cuadrado.jpg" alt="">
+                <label for="inputcuadrado">
+                    <input id="inputladotriangulo1" type="number">
+                    <input id="inputladotriangulo2" type="number">
+                    <input id="inputbasetriangulo" type="number">
                 </label>
+                <div class="botones">
+                    <button type="button" onclick="calcularPerimetroTriangulo()">Calcular el Perimetro</button>
+                    <button type="button" onclick="calcularAreaTriangulo()">Calcular el Área</button>
+                </div>
             </form>
         </section>
     </main>
