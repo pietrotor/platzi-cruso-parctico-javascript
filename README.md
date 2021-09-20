@@ -8,3 +8,11 @@ Este curso realizaremos una calculadora de
 - Segundo paso: Implementar estas formulas en JavaScript
 - Tercer paso: Crear funciones 
 - Cuarto paso: Integrar HTML con JavaScript con HTML
+
+
+## Taller 2 - Porcentajes y descuentos
+
+- Primer paso: Definir las formas
+- Segundo paso: Implementar estas formulas en JavaScript
+- Tercer paso: Crear funciones 
+- Cuarto paso: Integrar HTML con JavaScript con HTML
